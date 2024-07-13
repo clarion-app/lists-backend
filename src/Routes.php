@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use ClarionApp\ListsBackend\Http\Controllers\ListController;
+use ClarionApp\ListsBackend\Controllers\ListController;
 
 Route::group(['middleware'=>['api'], 'prefix'=>'api/clarion-app/lists'], function () {
     Route::resource('lists', ListController::class);
