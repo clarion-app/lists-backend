@@ -1,6 +1,7 @@
 {
     "name": "clarion-app/lists-backend",
     "description": "A Laravel package for managing lists",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "ClarionApp\\ListsBackend\\": "src/"
