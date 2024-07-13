@@ -1,0 +1,19 @@
+{
+    "name": "clarion-app/lists-backend",
+    "description": "A Laravel package for managing lists",
+    "autoload": {
+        "psr-4": {
+            "ClarionApp\\ListsBackend\\": "src/"
+        }
+    },
+    "require": {
+        "metaverse-systems/eloquent-multichain-bridge": "dev-main"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ClarionApp\\ListsBackend\\ListsBackendServiceProvider"
+            ]
+        }
+    }
+}

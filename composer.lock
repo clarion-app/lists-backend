@@ -1,0 +1,118 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "50a101cc8c2d608f8bd1ca287aa7da16",
+    "packages": [
+        {
+            "name": "metaverse-systems/eloquent-multichain-bridge",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/metaverse-systems/eloquent-multichain-bridge.git",
+                "reference": "d271a474bba70eb79f4c12a9962c0f0a7b6429ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/metaverse-systems/eloquent-multichain-bridge/zipball/d271a474bba70eb79f4c12a9962c0f0a7b6429ba",
+                "reference": "d271a474bba70eb79f4c12a9962c0f0a7b6429ba",
+                "shasum": ""
+            },
+            "require": {
+                "metaverse-systems/multichain-php-client": "^1.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MetaverseSystems\\EloquentMultiChainBridge\\EloquentMultiChainProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "App\\": "app/",
+                    "MetaverseSystems\\EloquentMultiChainBridge\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Schwartz",
+                    "email": "tim@metaverse.systems"
+                }
+            ],
+            "description": "Replicates models onto blockchain",
+            "support": {
+                "issues": "https://github.com/metaverse-systems/eloquent-multichain-bridge/issues",
+                "source": "https://github.com/metaverse-systems/eloquent-multichain-bridge/tree/main"
+            },
+            "time": "2024-07-07T04:36:24+00:00"
+        },
+        {
+            "name": "metaverse-systems/multichain-php-client",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/metaverse-systems/multichain-php-client.git",
+                "reference": "a0736898f22ef4342ddbf4b843f60576ed68fbfe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/metaverse-systems/multichain-php-client/zipball/a0736898f22ef4342ddbf4b843f60576ed68fbfe",
+                "reference": "a0736898f22ef4342ddbf4b843f60576ed68fbfe",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MetaverseSystems\\MultiChain\\MultiChainProvider"
+                    ],
+                    "aliases": {
+                        "MultiChain": "MetaverseSystems\\MultiChain\\Facades\\MultiChain"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "App\\": "app/",
+                    "MetaverseSystems\\MultiChain\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Schwartz",
+                    "email": "tim@metaverse.systems"
+                }
+            ],
+            "description": "PHP package for communicating with MultiChain node",
+            "support": {
+                "issues": "https://github.com/metaverse-systems/multichain-php-client/issues",
+                "source": "https://github.com/metaverse-systems/multichain-php-client/tree/v1.0.0"
+            },
+            "time": "2022-12-18T07:28:18+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "metaverse-systems/eloquent-multichain-bridge": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}
