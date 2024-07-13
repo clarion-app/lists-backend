@@ -13,6 +13,7 @@ return new class extends Migration
             $table->uuid('item_list_id');
             $table->string('name');
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('item_list_id')->references('id')->on('clarion_app_lists_item_lists')->onDelete('cascade');
         });
