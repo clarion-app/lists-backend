@@ -48,11 +48,11 @@ class ListController extends Controller
         return $list->load('items');
     }
 
-    /*
-        * Display the specified resource.
-        * @urlParam id required The ID of the list.
-        * @response ItemList
-        */
+    /**
+     * Display the specified resource.
+     * @urlParam id required The ID of the list.
+     * @response ItemList
+     */
     public function show($id)
     {
         $list = ItemList::with('items')->findOrFail($id);
@@ -106,7 +106,11 @@ class ListController extends Controller
         return response()->json(null, 204);
     }
 
-    
+    /**
+     * Clone the specified resource.
+     * @urlParam id required The ID of the list.
+     * @response ItemList
+     */
     public function clone($id)
     {
         $originalList = ItemList::with('items')->findOrFail($id);
