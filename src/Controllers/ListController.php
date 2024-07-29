@@ -10,11 +10,21 @@ use App\Http\Controllers\Controller;
 
 class ListController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     * @response array<ItemList>
+     */
     public function index()
     {
         return response()->json(ItemList::with('items')->get());
     }
 
+    /**
+     * Store a newly created resource in storage.
+     * @bodyParam name string required The name of the list.
+     * @bodyParam items array An array of items. Example: [{"name": "Item 1"}, {"name": "Item 2"}]
+     * @response ItemList
+     */
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -35,15 +45,27 @@ class ListController extends Controller
             }
         }
 
-        return response()->json($list->load('items'), 201);
+        return $list->load('items');
     }
 
+    /*
+        * Display the specified resource.
+        * @urlParam id required The ID of the list.
+        * @response ItemList
+        */
     public function show($id)
     {
         $list = ItemList::with('items')->findOrFail($id);
         return response()->json($list);
     }
 
+    /**
+     * Update the specified resource in storage.
+     * @urlParam id required The ID of the list.
+     * @bodyParam name string The name of the list.
+     * @bodyParam items array An array of items. Example: [{"name": "Item 1"}, {"name": "Item 2"}]
+     * @response ItemList
+     */
     public function update(Request $request, $id)
     {
         $list = ItemList::findOrFail($id);
@@ -70,6 +92,11 @@ class ListController extends Controller
         return response()->json($list->load('items'));
     }
 
+    /**
+     * Remove the specified resource from storage.
+     * @urlParam id required The ID of the list.
+     * @response null
+     */
     public function destroy($id)
     {
         $list = ItemList::findOrFail($id);
@@ -79,6 +106,7 @@ class ListController extends Controller
         return response()->json(null, 204);
     }
 
+    
     public function clone($id)
     {
         $originalList = ItemList::with('items')->findOrFail($id);
