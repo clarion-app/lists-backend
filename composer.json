@@ -8,7 +8,7 @@
         }
     },
     "require": {
-        "metaverse-systems/eloquent-multichain-bridge": "dev-main"
+        "clarion-app/eloquent-multichain-bridge": "dev-main"
     },
     "extra": {
         "laravel": {
@@ -16,5 +16,6 @@
                 "ClarionApp\\ListsBackend\\ListsBackendServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
