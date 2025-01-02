@@ -11,7 +11,7 @@ use App\Http\Controllers\Controller;
 class ListController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the lists.
      * @response array<ItemList>
      */
     public function index()
@@ -20,7 +20,7 @@ class ListController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created list in storage.
      * @bodyParam name string required The name of the list.
      * @bodyParam items array An array of items. Example: [{"name": "Item 1"}, {"name": "Item 2"}]
      * @response ItemList
@@ -49,7 +49,7 @@ class ListController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified list.
      * @urlParam id required The ID of the list.
      * @response ItemList
      */
@@ -60,7 +60,7 @@ class ListController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified list in storage.
      * @urlParam id required The ID of the list.
      * @bodyParam name string The name of the list.
      * @bodyParam items array An array of items. Example: [{"name": "Item 1"}, {"name": "Item 2"}]
@@ -93,7 +93,7 @@ class ListController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified list from storage.
      * @urlParam id required The ID of the list.
      * @response null
      */
@@ -107,7 +107,7 @@ class ListController extends Controller
     }
 
     /**
-     * Clone the specified resource.
+     * Clone the specified list.
      * @urlParam id required The ID of the list.
      * @response ItemList
      */

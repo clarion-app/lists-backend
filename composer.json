@@ -8,13 +8,18 @@
         }
     },
     "require": {
-        "clarion-app/eloquent-multichain-bridge": "dev-main"
+        "clarion-app/eloquent-multichain-bridge": "dev-main",
+        "clarion-app/backend": "dev-main"
     },
     "extra": {
         "laravel": {
             "providers": [
                 "ClarionApp\\ListsBackend\\ListsBackendServiceProvider"
             ]
+        },
+        "clarion": {
+            "app-name": "@clarion-app/lists",
+            "description": "Provides operations for managing lists"
         }
     },
     "minimum-stability": "dev"

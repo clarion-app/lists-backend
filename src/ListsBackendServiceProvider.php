@@ -2,12 +2,14 @@
 
 namespace ClarionApp\ListsBackend;
 
-use Illuminate\Support\ServiceProvider;
+use ClarionApp\Backend\ClarionPackageServiceProvider;
 
-class ListsBackendServiceProvider extends ServiceProvider
+class ListsBackendServiceProvider extends ClarionPackageServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
+        parent::boot();
+
         $this->loadMigrationsFrom(__DIR__.'/Migrations');
         if(!$this->app->routesAreCached())
         {
