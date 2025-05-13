@@ -107,6 +107,21 @@ class ListController extends Controller
     }
 
     /**
+     * Remove the specified item from the list.
+     * @urlParam list_id required The ID of the list.
+     * @urlParam item_id required The ID of the item.
+     * @response null
+     */
+    public function destroyItem($list_id, $item_id)
+    {
+        $list = ItemList::findOrFail($list_id);
+        $item = $list->items()->findOrFail($item_id);
+        $item->delete();
+
+        return response()->json(null, 204);
+    }
+
+    /**
      * Clone the specified list.
      * @urlParam id required The ID of the list.
      * @response ItemList
